@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return "<h1>Welcome to server</h1>"
 
 @app.route('/post')
 def post():
@@ -91,4 +91,4 @@ def publish():
     return redirect(url_for('post_adm',indicator = True))
 
 if __name__ == '__main__':
-    pildora.app.run(debug=False)
+    app.run(threaded=True,debug=False, port=5000)
