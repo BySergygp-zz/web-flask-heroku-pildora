@@ -28,7 +28,7 @@ def _deactivate(args):
 _deactivate(["nondestructive"])
 aliases["deactivate"] = _deactivate
 
-$VIRTUAL_ENV = r"/mnt/c/Users/sergy/documents/projects/env"
+$VIRTUAL_ENV = r"/mnt/c/Users/sergy/documents/projects/web-flask-heroku-pildora/env"
 
 $_OLD_VIRTUAL_PATH = $PATH
 $PATH = $PATH[:]

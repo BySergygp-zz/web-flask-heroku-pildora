@@ -46,7 +46,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV='/mnt/c/Users/sergy/documents/projects/env'
+VIRTUAL_ENV='/mnt/c/Users/sergy/documents/projects/web-flask-heroku-pildora/env'
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
