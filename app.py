@@ -11,6 +11,8 @@ import module_json
 # variables
 deb = True
 
+# Inicio de la app
+
 @app.route('/')
 def index():
     return "<h1>Welcome to server</h1>"
