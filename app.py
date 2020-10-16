@@ -1,28 +1,19 @@
 from flask import Flask
 from flask import render_template, request, redirect, url_for
 
-import json
-
-        
+import json  
 
 app = Flask(__name__)
+
+# import modules
+import module_json 
+
+# variables
+deb = True
 
 @app.route('/')
 def index():
     return "<h1>Welcome to server</h1>"
-
-@app.route('/post')
-def post():
-    import json
-    data = None
-    with open('pildoras.json') as json_file: 
-        data = json.load(json_file)
-    data  = data['posts']
-    print('----')
-    print(data)
-    print(len(data))
-    print('----')
-    return render_template('post.html',post = data,lon = (int) (len(data)/3) ,indicator = False)
 
 # Funcionalidad vista de un post
 
@@ -42,15 +33,15 @@ def view(title):
      
     return render_template('index.html',titulo = titulo, cuerpo = cuerpo)
 
+
 # Funcionalidades del administrador
 
 @app.route('/adm/create_post')
 def create_post():
     return render_template('publish.html')
-    
 
-@app.route('/adm/post')
-def post_adm():
+@app.route('/adm/post')    
+def adm_post():
     import json
     data = None
     with open('pildoras.json') as json_file: 
@@ -91,4 +82,4 @@ def publish():
     return redirect(url_for('post_adm',indicator = True))
 
 if __name__ == '__main__':
-    app.run(threaded=True,debug=False, port=5000)
+    app.run(threaded=True,debug=deb, port=5000)

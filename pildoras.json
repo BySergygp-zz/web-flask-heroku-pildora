@@ -39,6 +39,10 @@
         {
             "titulo": "Prueba1",
             "cuerpo": "Hola esto es una prueba 1"
+        },
+        {
+            "titulo": null,
+            "cuerpo": null
         }
     ]
 }
